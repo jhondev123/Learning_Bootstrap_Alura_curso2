@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-bs-theme="light">
 
 <header>
 
@@ -38,13 +38,13 @@
                             <a class="nav-link" href="#">Sobre</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contato</a>
+                            <a class="nav-link" href="#contato">Contato</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                                    <label class="form-check-label" for="flexSwitchCheckDefault">Modo noturno</label>
+                                    <input class="form-check-input" type="checkbox" role="switch" id="modo-noturno"">
+                                    <label class="form-check-label" for="modo-noturno">Modo noturno</label>
                                 </div>
                             </a>
                         </li>
@@ -118,7 +118,7 @@
 <!-- Produtos -->
     <section class="mb-3">
     <h2 class="text-center mt-3 mb-3 my-xl-5 fw-bold">Nossos Produtos</h2>
-    <div class="container row mx-auto g-4">
+    <div class="container row mx-auto g-4 mx-0">
             <div class="col-12 col-md-6 col-xxl-4 btn">
                 <div class="card rounded-0 border-0"data-bs-toggle="modal" data-bs-target="#modal-1">
                     <img src="./img/produtos-cafe-tradicional.png" alt="" class="">
@@ -173,6 +173,58 @@
 
     <!-- Banner do café-->
     <section class="banners banner-3 d-flex flex-column justify-content-center text-center "> </section>
+
+    <!-- Formulário de contato -->
+    <section class="py-4 container">
+        <div class="row">
+            <div class="col-10 col-xl-8 mx-auto">
+                <div class="border border-2 rounded p-3">
+                    <h3 class="fw-bold p-3 text-center">Entre em contato</h3>
+                    <form method="post" id="contato">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="Nome" placeholder="nome">
+                            <label for="Nome">Nome</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                            <label for="email">Email </label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="Telefone" placeholder="name@Telefone.com">
+                            <label for="Telefone">Telefone</label>
+                        </div>
+                        <select class="form-select mb-3" aria-label="Default select example">
+                            <option selected>Preferência de contato: </option>
+                            <option value="1">E-mail</option>
+                            <option value="2">Whatszapp</option>
+                            <option value="3">Ligação</option>
+                        </select>
+                        <label for="nivel-satisfacao" class="form-label">Nivel de satisfação:</label>
+                        <input type="range" class="form-range input-range" id="nivel-satisfacao">
+                        <div class="form-check ">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Gostaria de receber atualizações
+                            </label>
+                        </div>
+                        <button type="button" class="btn botao-padrao fw-bold w-100 p-2 mt-3 py-3">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Rodapé -->
+    <footer class="text-center">
+        <section class="container p-4 pb-0 mb-4">
+            <a class="btn" href="#!"><i class="bi bi-whatsapp"></i></a>
+            <a class="btn" href="#!"><i class="bi bi-instagram"></i></a>
+            <a class="btn" href="#!"><i class="bi bi-twitter"></i></a>
+        </section>
+        <div class="p-3">
+            2023 <i class="bi bi-c-circle"></i> Desenvolvido por Alura | Projeto fictício sem fins comerciais.
+        </div>
+    </footer>
 </main>
 
 <!-- Canvas 1-->
@@ -344,6 +396,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
     crossorigin="anonymous"></script>
-
+<script src="./js/temaSite.js"></script>
 </body>
 </html>
